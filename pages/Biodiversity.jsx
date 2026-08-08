@@ -14,7 +14,7 @@ import CopyJson from '../components/analysis/CopyJson'
 import { ErrorState, EmptyState, Skeleton, Notice } from '../components/ui/States'
 import { useApi } from '../hooks/useApi'
 import { getResults } from '../api/endpoints'
-import { CHART, seriesColor, tooltipStyle, axisProps } from '../lib/charts'
+import { CHART, seriesColor, tooltipStyle, axisProps } from '../charts'
 
 /**
  * Biodiversity analytics. Reads GET /analysis/{id}/results and reshapes
