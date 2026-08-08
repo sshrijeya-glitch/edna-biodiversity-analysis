@@ -15,8 +15,8 @@ import CopyJson from '../components/analysis/CopyJson'
 import { ErrorState, EmptyState, Skeleton } from '../components/ui/States'
 import { useApi } from '../hooks/useApi'
 import { getResults } from '../api/endpoints'
-import { CHART, seriesColor, tooltipStyle, axisProps } from '../lib/charts'
-import { formatDate, isSeededDemoSample } from '../lib/format'
+import { CHART, seriesColor, tooltipStyle, axisProps } from '../charts'
+import { formatDate, isSeededDemoSample } from '../format'
 
 /**
  * Combined results view. One call: GET /analysis/{id}/results.
