@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import AppLayout from './AppLayout'
-import Landing from './Landing'
+import AppLayout from './components/layout/AppLayout'import Landing from './Landing'
 import Dashboard from './Dashboard'
 import SampleList from './SampleList'
 import CreateSample from './CreateSample'
