@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 @layer base {
-  html { -webkit-font-smoothing: antialiased; }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
   body {
     @apply bg-mist text-ink font-sans;
   }
-  /* Typography: Space Grotesk carries headings with tight tracking,
-     IBM Plex Mono carries anything that is data (IDs, sequences, metrics). */
-  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+
+  /*
+   * Typography: Space Grotesk carries headings with tight tracking,
+   * IBM Plex Mono carries anything that is data (IDs, sequences, metrics).
+   */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
   :focus-visible {
     outline: 2px solid #2FA98F;
     outline-offset: 2px;
@@ -18,34 +30,64 @@
 }
 
 @layer components {
-  /* Eyebrow label — used above section headings on dark and light */
+  /*
+   * Eyebrow label — used above section headings on dark and light
+   */
   .eyebrow {
     @apply font-mono text-[11px] uppercase tracking-[0.18em];
   }
-  /* Subtle glass panel, only over the dark helix field */
+
+  /*
+   * Subtle glass panel, only over the dark helix field
+   */
   .glass {
     background: rgba(14, 46, 62, 0.55);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(127, 212, 193, 0.14);
   }
-  .hairline-dark { border-color: rgba(127, 212, 193, 0.14); }
+
+  .hairline-dark {
+    border-color: rgba(127, 212, 193, 0.14);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
 
-/* The ecosystem report is meant to be printed or saved as PDF from the browser.
-   Drop the app chrome and force a light background so it prints cleanly. */
+/*
+ * The ecosystem report is meant to be printed or saved as PDF from the browser.
+ * Drop the app chrome and force a light background so it prints cleanly.
+ */
 @media print {
-  aside, header { display: none !important; }
-  .lg\:pl-\[264px\] { padding-left: 0 !important; }
-  main { padding: 0 !important; max-width: none !important; }
-  .shadow-card, .shadow-lift { box-shadow: none !important; border: 1px solid #DDE6E9 !important; }
-  body { background: #FFFFFF !important; }
+  aside,
+  header {
+    display: none !important;
+  }
+
+  .lg\:pl-\[264px\] {
+    padding-left: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  .shadow-card,
+  .shadow-lift {
+    box-shadow: none !important;
+    border: 1px solid #DDE6E9 !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+  }
 }
